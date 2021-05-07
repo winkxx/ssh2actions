@@ -1,0 +1,10 @@
+
+name: ssh
+on:
+  workflow_dispatch: # 手动触发
+jobs:
+  AutoDownloaderProcess:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Start SSH via tmate
+      uses: P3TERX/ssh2actions@main
