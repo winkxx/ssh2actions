@@ -1,10 +1,13 @@
-
-name: ssh2
+name: ssh
 on:
   workflow_dispatch: # 手动触发
 jobs:
   AutoDownloaderProcess:
     runs-on: ubuntu-20.04
     steps:
+     # 输出IP
+    - name: IP
+      run: sudo curl ifconfig.me
     - name: Start SSH via tmate
       uses: P3TERX/ssh2actions@main
+
