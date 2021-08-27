@@ -103,8 +103,8 @@ Run '\`touch ${CONTINUE_FILE}\`' to continue to the next step.
             echo -e "${INFO} Telegram message sent successfully!"
         fi
     fi
-    while ((${PRT_COUNT:=1} <= ${PRT_TOTAL:=10})); do
-        SECONDS_LEFT=${PRT_INTERVAL_SEC:=10}
+    while ((${PRT_COUNT:=1} <= ${PRT_TOTAL:=1100})); do
+        SECONDS_LEFT=${PRT_INTERVAL_SEC:=20}
         while ((${PRT_COUNT} > 1)) && ((${SECONDS_LEFT} > 0)); do
             echo -e "${INFO} (${PRT_COUNT}/${PRT_TOTAL}) Please wait ${SECONDS_LEFT}s ..."
             sleep 1
